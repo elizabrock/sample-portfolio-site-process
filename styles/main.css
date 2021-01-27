@@ -1,0 +1,77 @@
+/* Our work from Session 19, letting the content breath a bit */
+body {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+/* Now we add some layout.  I'm thinking left nav on bigger screens,
+ * and horizontal nav on smaller screens?
+ * I used https://grid.layoutit.com/ as a starting point for generating
+ * the grid. */
+
+body {
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "head main"
+    "nav main"
+    "nav foot";
+}
+
+body > header { grid-area: head; }
+body > nav { grid-area: nav; }
+body > main { grid-area: main; }
+body > footer { grid-area: foot; }
+body > main img { max-width: 100%; }
+
+@media only screen and (max-width: 36rem) {
+  body {
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "head head"
+      "nav nav"
+      "main main"
+      "foot foot";
+  }
+}
+
+section#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+section#portfolio .portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+section#portfolio .portfolio-item > h2 {
+
+}
+section#portfolio .portfolio-item > p {
+
+}
+section#portfolio .portfolio-item > img {
+  align-self: flex-end;
+}
+
+@media only screen and (min-width: 50rem) {
+  section#portfolio .portfolio-item {
+    padding-right: 2%;
+    flex-basis: 48%;
+  }
+}
+
+@media only screen and (min-width: 72rem) {
+  section#portfolio .portfolio-item {
+    padding: 2%;
+    flex-basis: 29%;
+  }
+}
