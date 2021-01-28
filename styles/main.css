@@ -22,6 +22,9 @@ body {
     "head main"
     "nav main"
     "nav foot";
+  background-image: url("../images/np_Colorful leaves from amber to green bordering side of light background_48djK4_free.jpg");
+  background-position: right top;
+  background-size: cover;
 }
 
 body > header { grid-area: head; }
