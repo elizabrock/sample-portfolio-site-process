@@ -22,13 +22,21 @@ body {
     "head main"
     "nav main"
     "nav foot";
-  background-image: url("../images/np_Colorful leaves from amber to green bordering side of light background_48djK4_free.jpg");
-  background-position: right top;
-  background-size: cover;
 }
 
-body > header { grid-area: head; }
-body > nav { grid-area: nav; }
+body > header {
+  grid-area: head;
+  padding-left: 1rem;
+}
+body > nav {
+  grid-area: nav;
+  padding-left: 1rem;
+}
+body > nav ul {
+  margin-top: 0;
+  padding: 0;
+  list-style-type: none;
+}
 body > main { grid-area: main; }
 body > footer { grid-area: foot; }
 body > main img { max-width: 100%; }
