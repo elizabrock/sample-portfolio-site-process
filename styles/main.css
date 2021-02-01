@@ -105,6 +105,7 @@ body {
     "head main"
     "nav main"
     "nav foot";
+  background-image: linear-gradient(135deg, rgba(252,121,102, 0.92) 0%, rgba(252,121,102, 0.92) 54%,rgb(245, 189, 51) 54%, rgb(245, 189, 51) 61%,rgb(254, 99, 119) 61%, rgb(254, 99, 119) 66%,rgb(250, 144, 85) 66%, rgb(250, 144, 85) 69%,rgb(243, 211, 34) 69%, rgb(243, 211, 34) 84%,rgb(247, 166, 68) 84%, rgb(247, 166, 68) 100%); */
 }
 
 body > header {
@@ -120,7 +121,10 @@ body > nav ul {
   padding: 0;
   list-style-type: none;
 }
-body > main { grid-area: main; }
+body > main {
+  grid-area: main;
+  padding: 0 1rem;
+}
 body > footer { grid-area: foot; }
 body > main img { max-width: 100%; }
 
